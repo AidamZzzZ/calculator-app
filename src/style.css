@@ -1,96 +1,154 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  --primary-color: #f7f7f7;
+  --secondary-color: #d8d8d8;
+  --white-color: white;
+  --black-color: #0e0222;
+  --clean-button-color: #e2e3e3;
+  --funct-button-color: #f5eeff;
+  --operator-button-color: #ececec;
+  --equal-button-color: #9d59ff;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
-a:hover {
-  color: #535bf2;
+
+* {
+  margin: 0;
 }
 
 body {
-  margin: 0;
+  background-color: var(--primary-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Roboto';
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+#root, #__next {
+  isolation: isolate;
+}
+
+.container-calculator {
+  border: 2px solid var(--secondary-color);
+  background-color: var(--white-color);
+  width: 450px;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+  font-size: 2.2rem;
+  margin: 80px auto 20px;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.header {
+  background-color: var(--black-color);
+  height: 75px;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border: 1px solid var(--black-color);
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+h2 {
+  margin-left: 20px;
+  font-size: 1.4rem;
+  color: var(--white-color);
 }
 
-.card {
-  padding: 2em;
+.input-number {
+  border: 1px solid var(--secondary-color);
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px auto;
+  width: 93%;
+  padding: 10px;
 }
 
-.read-the-docs {
-  color: #888;
+#display {
+  font-weight: 700;
+  font-size: 1.5rem;
+  border: none;
+  text-align: right;
+  width: 100%;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+.number-arithmetic-operations {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 20px auto 20px;
+}
+
+.clean-button,
+.funct-button,
+.operator-button,
+.number-button,
+.equal-button,
+.zero-button {
+  width: 21%;
+  padding: 7px;
+  border: 1px solid var(--secondary-color);
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  border-radius: 5px;
+  background-color: var(--white-color);
+  transition: 1s;
+  margin: 1px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.zero-button {
+  width: 43%;
+}
+
+.clean-button {
+  background-color: var(--clean-button-color);
+}
+
+.funct-button {
+  background-color: var(--operator-button-color);
+}
+
+.operator-button {
+  background-color: var(--operator-button-color);
+}
+
+.equal-button {
+  background-color: var(--equal-button-color);
+  color: var(--white-color);
+}
+
+.clean-button:hover,
+.funct-button:hover,
+.operator-button:hover,
+.number-button:hover,
+.equal-button:hover,
+.zero-button:hover {
+  filter: brightness(0.9);
 }

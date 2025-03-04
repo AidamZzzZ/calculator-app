@@ -1,13 +1,86 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta name="description" content="Calculadora basica para operaciones arithmeticas sencillas">
+    <meta name="robots" content="index, follow">
+    <title>Calculadora Basica</title>
+    <link rel="stylesheet" href="./src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div id="app"></div>
+    <h1>Calculadora Básica</h1>
+    <div class="container-calculator">
+      <div class="header">
+        <h2>Calculadora</h2>
+      </div>
+      <div class="input-number">
+        <input type="text" id="display" maxlength="28" disabled>
+      </div>
+      <div class="number-arithmetic-operations">
+        <label for="button"></label>
+        <input type="button" name="button" value="C" class="clean-button" data-action="clear">
+        
+        <label for="button"></label>
+        <input type="button" name="button" value="<-" class="funct-button" data-action="delete">
+        
+        <label for="button"></label>
+        <input type="button" name="button" value="%" class="funct-button" data-action="percentaje">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="/" class="operator-button" data-action="divide">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="7" class="number-button">
+        
+        <label for="button"></label>
+        <input type="button" name="button" value="8" class="number-button">
+        
+        <label for="button"></label>
+        <input type="button" name="button" value="9" class="number-button">
+        
+        <label for="button"></label>
+        <input type="button" name="button" value="*" class="operator-button" data-action="multiply">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="4" class="number-button">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="5" class="number-button">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="6" class="number-button">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="-" class="operator-button" data-action="substract">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="1" class="number-button">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="2" class="number-button">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="3" class="number-button">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="+" class="operator-button" data-action="add">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="0" class="zero-button">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="." class="number-button" data-action="decimal">
+
+        <label for="button"></label>
+        <input type="button" name="button" value="=" class="equal-button" data-action="calculate">
+
+      </div>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
